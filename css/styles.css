@@ -1,13 +1,43 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+}
+.navigation{
+    width: 73%;
+    margin: 0 auto;
+    background-color: black;
+    padding: 30px;
+    display: flex;
+}
+header{
+    background-color: black;
+    vertical-align: top;
+    padding: 4px;
+}
 .inline-block{
     display: inline-block;
     vertical-align: top;
+    padding: 5px 0 5px 0;
+    text-align: right;
+    line-height: 32px;
 }
-.logo{
-    width: 23%;
+ul.inline-block{
+    margin-top: 15px;
+}
+.inline-block li{
+    display: inline;
+    padding: 0 10px 0 10px;
+    font-size: 20px;
+    color: #FC5748;
+}
+.inline-block.logo{
     padding: 1%;
+    width: 120px;
+    height: 50px;
     text-align: center;
+    background-color: white;
 }
-nav .inline-block{
+nav{
     width: 73%;
     padding: 1%;
 }
@@ -18,24 +48,116 @@ ul{
 .heroImg{
     height: 600px;
     padding: 25px;
-    float: left
 }
 .content{
-    width: 500px;
+    width: auto;
     margin: 0 auto;
+    columns: 2;
+    align-items: flex-start;
+}
+button{
+    background-color: #6438E0;
+    color: white;
+    text-transform: bold;
+    font-size: 18px;
+    size: 20px;
+    align-content: flex-end;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 8px;
 }
 footer{
-    background-color: #373738;
-    padding: center;
-    color: white;
+    display: flex;
+    width: 100%;
+    background-color: white;
+    color: black;
     align-items: center;
     justify-content: center;
 }
-ul{
-    display: inline-block;
-    vertical-align: top;
-    padding: center;
-}
 p{
-    color: black;
+    color: white;
+}
+h1{
+    color: #FC5748;
+    font-size: 36px;
+    text-align: left;
+    padding: 10px;
+}
+h2{
+    color: white;
+    font-size: 24px;
+}
+h3{
+    color: white;
+    font-size: large;
+    text-align: center;
+    text-decoration: underline;
+}
+h4{
+    color: white;
+    font-size: 18px;
+}
+h5{
+    font-size: 30px;
+    text-align: center;
+    color: #FC5748;
+}
+
+/* My UX Skills section coded using CSS flex */
+
+.flexContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+    padding: 10px;
+}
+.container1 .container2 .container3{
+    width: 33%;
+    padding: 10px;
+    margin: 5px;
+    column-gap: 5%;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+/*My Work Section constructed using CSS Grid*/
+
+.workGrid{
+    display: grid;
+    grid-template-areas: 'grid-item-image gridItem' 
+                         'grid-item-image gridItem';
+    column-gap: 50px;
+    justify-content: center;
+    align-items: center;
+    row-gap: 40px;
+    padding: 10px;
+}
+.grid-item-image{
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .flexContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .container1 .container2 .container3{
+        width: 100%;
+    }
+    .workGrid{
+        grid-template-rows: 300px 300px 300px 300px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        'grid-item-image'
+        'gridItem'
+        'grid-item-image'
+        'gridItem'
+        ;
+        justify-content: center;
+        align-items: center;
+    }
 }
